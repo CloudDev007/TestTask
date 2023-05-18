@@ -3,18 +3,18 @@ import Node from '../Node/Node';
 import WorkspaceNav from '../WorkspaceNav/WorkspaceNav';
 import Zoom from '../Zoom/Zoom';
 import CenterBtn from '../buttons/CenterBtn/CenterBtn';
-import styles from './Untitled.module.css';
+import styles from './Canvas.module.css';
 import React, { useState } from 'react';
 
 let nodeId = 0;
 
-const Untitled = () => {
-    const title = "Services";
+const Canvas = () => {
+    const title = "Example";
     const count = 0;
 
     const [data, setData] = useState<Data>({
         id: 0,
-        label: "Categories",
+        label: "Options",
         level: 0,
         successor: []
     });
@@ -131,15 +131,8 @@ const Untitled = () => {
             <section className={styles.top_bar}>
                 <div className={styles.top_left}>
                     <h1 className={styles.title}>{title}</h1>
-                    <span className={styles.count}>{count}</span>
                 </div>
                 <div className={styles.top_right}>
-                    <button
-                        className={styles.list_view} onClick={handleListViewClick}
-                    >
-                        List View
-                    </button>
-                    <CenterBtn onClick={centerWorksheet} />
                     <Zoom onZoomChange={updateZoom} />
                 </div>
             </section>
@@ -156,4 +149,4 @@ const Untitled = () => {
     );
 };
 
-export default Untitled;
+export default Canvas;
